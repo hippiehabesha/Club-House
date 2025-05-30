@@ -20,17 +20,17 @@ public class LoginPage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        username = getActivity().findViewById(R.id.username);
+        password = getActivity().findViewById(R.id.password);
+        loginBtn = getActivity().findViewById(R.id.loginBtn);
+
+
         return inflater.inflate(R.layout.fragment_login_page, container, false);
 
 
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        username = getActivity().findViewById(R.id.username);
-        password = getActivity().findViewById(R.id.password);
-        loginBtn = getActivity().findViewById(R.id.loginBtn);
 
-    }
 }

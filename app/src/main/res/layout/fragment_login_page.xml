@@ -70,17 +70,5 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/register_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not registered yet? sign up now!"
-        android:textSize="16sp"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:layout_marginBottom="20dp"/>
-
-
-
 
 </LinearLayout>
