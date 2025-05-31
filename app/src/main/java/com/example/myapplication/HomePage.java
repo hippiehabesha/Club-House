@@ -78,30 +78,4 @@ public class HomePage extends Fragment {
         return view;
     }
 
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-
-        inflater.inflate(R.menu.home_menu, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.menuAccount) {
-            Toast.makeText(requireContext(), "Account", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (id == R.id.menuSettings) {
-            Toast.makeText(requireContext(), "Settings", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (id == R.id.menuClubs) {
-            Toast.makeText(requireContext(), "Clubs", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (id == R.id.menuLogout) {
-            Toast.makeText(requireContext(), "Logout", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
-    }
 }
