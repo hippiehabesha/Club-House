@@ -16,6 +16,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+
         if (showMenu) {
             // HomeActivity: show HomePage (with menu)
             return new HomePage();
