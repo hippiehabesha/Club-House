@@ -9,6 +9,8 @@ material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
 mediarouter = "1.3.1"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.2.1"
 
 [libraries]
 imageslideshow = { module = "com.github.denzcoskun:ImageSlideshow", version.ref = "imageslideshow" }
@@ -20,7 +22,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 mediarouter = { group = "androidx.mediarouter", name = "mediarouter", version.ref = "mediarouter" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

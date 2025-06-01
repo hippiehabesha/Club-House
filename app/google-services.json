@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "414438735760",
+    "project_id": "club-house-6d425",
+    "storage_bucket": "club-house-6d425.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414438735760:android:680efb90a6b33eb4a3fd15",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUk488zrlBw0DNNovdnC_Ez2aBxHnQkeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

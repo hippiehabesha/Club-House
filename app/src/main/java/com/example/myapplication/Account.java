@@ -8,14 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myapplication.databinding.FragmentAccountBinding;
 
 public class Account extends Fragment {
-
+    private FragmentAccountBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        binding = FragmentAccountBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 }
+

@@ -4,25 +4,23 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.tabs.TabLayout;
+import com.example.myapplication.databinding.FragmentHomePageBinding;
 
 import java.util.ArrayList;
 
 public class HomePage extends Fragment {
+    private FragmentHomePageBinding binding;
     TabLayout tabLayout;
     ViewPager2 viewPager;
     EventViewAdapter vpAdapter;
@@ -36,18 +34,17 @@ public class HomePage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home_page, container, false);
+        binding = FragmentHomePageBinding.inflate(inflater, container, false);
 
-        ImageSlider imageSlider = view.findViewById(R.id.image_slider);
+        ImageSlider imageSlider = binding.imageSlider;
         ArrayList<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.test1, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.test2, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.test3, ScaleTypes.FIT));
-
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
-        tabLayout = view.findViewById(R.id.tabLayout);
-        viewPager = view.findViewById(R.id.eventsViewpage);
+        tabLayout = binding.tabLayout;
+        viewPager = binding.eventsViewpage;
         vpAdapter = new EventViewAdapter(requireActivity());
         viewPager.setAdapter(vpAdapter);
 
@@ -75,7 +72,7 @@ public class HomePage extends Fragment {
             }
         });
 
-        return view;
+        return binding.getRoot();
     }
 
 }

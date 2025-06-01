@@ -10,7 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 public class MainActivity extends AppCompatActivity {
-    ViewPager2 viewPager2;
+    private ViewPager2 viewPager2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +21,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewpage);
         viewPager2.setAdapter(new ViewPagerAdapter(this, false));
     }
-}
 
+    public ViewPager2 getViewPager2() {
+        return viewPager2;
+    }
+}
