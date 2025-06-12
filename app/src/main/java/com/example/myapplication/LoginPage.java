@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -19,7 +20,7 @@ public class LoginPage extends Fragment {
     private FragmentLoginPageBinding binding;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentLoginPageBinding.inflate(inflater, container, false);
         auth = FirebaseAuth.getInstance();
@@ -52,16 +53,14 @@ public class LoginPage extends Fragment {
             }
         });
 
-        if (binding.signupRedirect != null) {
-            binding.signupRedirect.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (getActivity() instanceof MainActivity) {
-                        ((MainActivity) getActivity()).getViewPager2().setCurrentItem(1, true);
-                    }
+        binding.signupRedirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getActivity() instanceof MainActivity) {
+                    ((MainActivity) getActivity()).getViewPager2().setCurrentItem(1, true);
                 }
-            });
-        }
+            }
+        });
 
         return binding.getRoot();
     }

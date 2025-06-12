@@ -9,10 +9,12 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.interfaces.ItemClickListener;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.tabs.TabLayout;
 import com.example.myapplication.databinding.FragmentHomePageBinding;
@@ -42,6 +44,17 @@ public class HomePage extends Fragment {
         slideModels.add(new SlideModel(R.drawable.test2, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.test3, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+        imageSlider.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemSelected(int position) {
+                Toast.makeText(requireContext(), "Image " + (position + 1) + " clicked", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void doubleClick(int position) {
+                // Optional: handle double click if needed
+            }
+        });
 
         tabLayout = binding.tabLayout;
         viewPager = binding.eventsViewpage;
